@@ -1,0 +1,321 @@
+{
+  "entities": {
+    "UserPublic": {
+      "title": "UserPublic",
+      "description": "Public-facing family member display profile (no PII such as email or phone).",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "familyRelation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "displayName", "familyRelation", "updatedAt"]
+    },
+    "UserPrivateProfile": {
+      "title": "UserPrivateProfile",
+      "description": "Isolated private user profile containing PII such as email.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 200
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "email", "createdAt"]
+    },
+    "ArchiveDocument": {
+      "title": "ArchiveDocument",
+      "description": "Digital family archive record following Dublin Core and family preservation fields.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 64,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "tenTaiLieu": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 240
+        },
+        "loaiTaiLieu": {
+          "type": "string",
+          "enum": [
+            "Thư từ",
+            "Nhật ký",
+            "Giấy khai sinh",
+            "Giấy chứng nhận",
+            "Giấy tờ cá nhân",
+            "Ảnh chụp",
+            "Tài liệu khác"
+          ],
+          "maxLength": 40
+        },
+        "nguoiTao": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "nguoiNhan": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "thoiGianTao": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "diaDiem": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "tomTat": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1500
+        },
+        "noiDungPhienAm": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "noiDungBienTap": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "ngonNgu": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "tinhTrangTaiLieu": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "nguoiLuuGiu": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "nguonGoc": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "phamViCongBo": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "mucDoRiengTu": {
+          "type": "string",
+          "enum": [
+            "Công khai rộng rãi",
+            "Công khai trong gia đình",
+            "Nội bộ dòng họ",
+            "Hạn chế — Chỉ người lưu giữ"
+          ],
+          "maxLength": 60
+        },
+        "mucKiemChung": {
+          "type": "string",
+          "enum": [
+            "Đã kiểm chứng",
+            "Đang chờ đối chiếu",
+            "Chưa kiểm chứng"
+          ],
+          "maxLength": 40
+        },
+        "daDuocPhepCongBo": {
+          "type": "boolean"
+        },
+        "coThongTinNhayCam": {
+          "type": "boolean"
+        },
+        "laDuLieuMau": {
+          "type": "boolean"
+        },
+        "ghiChu": {
+          "type": "string",
+          "maxLength": 3000
+        },
+        "danhSachAnh": {
+          "type": "array"
+        },
+        "taiLieuLienQuanIds": {
+          "type": "array"
+        },
+        "ownerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "tenTaiLieu",
+        "loaiTaiLieu",
+        "nguoiTao",
+        "thoiGianTao",
+        "diaDiem",
+        "tomTat",
+        "noiDungPhienAm",
+        "noiDungBienTap",
+        "ngonNgu",
+        "tinhTrangTaiLieu",
+        "nguoiLuuGiu",
+        "nguonGoc",
+        "phamViCongBo",
+        "mucDoRiengTu",
+        "mucKiemChung",
+        "daDuocPhepCongBo",
+        "coThongTinNhayCam",
+        "ownerId",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "DocumentContribution": {
+      "title": "DocumentContribution",
+      "description": "Audit log of family member contributions, provenance notes, and human-confirmed edits.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "docId": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 64,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "docOwnerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "docPrivacy": {
+          "type": "string",
+          "enum": [
+            "Công khai rộng rãi",
+            "Công khai trong gia đình",
+            "Nội bộ dòng họ",
+            "Hạn chế — Chỉ người lưu giữ"
+          ],
+          "maxLength": 60
+        },
+        "authorUid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ngay": {
+          "type": "string",
+          "minLength": 4,
+          "maxLength": 32
+        },
+        "nguoiThucHien": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "quanHe": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "hanhDong": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "noiDung": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3000
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "docId",
+        "docOwnerId",
+        "docPrivacy",
+        "authorUid",
+        "ngay",
+        "nguoiThucHien",
+        "quanHe",
+        "hanhDong",
+        "noiDung",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserPublic" },
+      "description": "Public display names and family relation labels of signed-in members."
+    },
+    "/users/{userId}/private/{docId}": {
+      "schema": { "$ref": "#/entities/UserPrivateProfile" },
+      "description": "Private PII (email) isolated strictly to the account owner or admin."
+    },
+    "/documents/{docId}": {
+      "schema": { "$ref": "#/entities/ArchiveDocument" },
+      "description": "Cloud-synced family archive documents with Dublin Core metadata and privacy enforcement."
+    },
+    "/documents/{docId}/contributions/{contributionId}": {
+      "schema": { "$ref": "#/entities/DocumentContribution" },
+      "description": "Contribution and verification history entries for each archival document."
+    }
+  }
+}

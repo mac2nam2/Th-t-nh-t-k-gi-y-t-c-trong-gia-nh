@@ -1,0 +1,280 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global Safety Net (Default Deny)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // === Global Primitives ===
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isBootstrapAdmin() {
+      return isVerifiedUser() && request.auth.token.email == 'macvnam2002@gmail.com';
+    }
+
+    function isAdmin() {
+      return isBootstrapAdmin() || (
+        isVerifiedUser() &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    function isOwner(userId) {
+      return isVerifiedUser() && request.auth.uid == userId;
+    }
+
+    // === Validation Blueprints ===
+    function isValidUserPublic(data, userId) {
+      return data.keys().hasAll(['uid', 'displayName', 'familyRelation', 'updatedAt'])
+        && data.keys().hasOnly(['uid', 'displayName', 'familyRelation', 'updatedAt'])
+        && data.uid is string && data.uid == userId && isValidId(data.uid)
+        && data.displayName is string && data.displayName.size() >= 1 && data.displayName.size() <= 120
+        && data.familyRelation is string && data.familyRelation.size() >= 1 && data.familyRelation.size() <= 120
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidUserPrivate(data, userId) {
+      return data.keys().hasAll(['uid', 'email', 'createdAt'])
+        && data.keys().hasOnly(['uid', 'email', 'createdAt'])
+        && data.uid is string && data.uid == userId && isValidId(data.uid)
+        && data.email is string && data.email.size() >= 3 && data.email.size() <= 200
+        && data.createdAt is timestamp;
+    }
+
+    function isValidDocumentCategory(cat) {
+      return cat in ['Thư từ', 'Nhật ký', 'Giấy khai sinh', 'Giấy chứng nhận', 'Giấy tờ cá nhân', 'Ảnh chụp', 'Tài liệu khác'];
+    }
+
+    function isValidPrivacyLevel(level) {
+      return level in ['Công khai rộng rãi', 'Công khai trong gia đình', 'Nội bộ dòng họ', 'Hạn chế — Chỉ người lưu giữ'];
+    }
+
+    function isValidVerificationStatus(status) {
+      return status in ['Đã kiểm chứng', 'Đang chờ đối chiếu', 'Chưa kiểm chứng'];
+    }
+
+    function isValidArchiveDocument(data) {
+      return data.keys().hasAll([
+          'id', 'tenTaiLieu', 'loaiTaiLieu', 'nguoiTao', 'thoiGianTao',
+          'diaDiem', 'tomTat', 'noiDungPhienAm', 'noiDungBienTap',
+          'ngonNgu', 'tinhTrangTaiLieu', 'nguoiLuuGiu', 'nguonGoc',
+          'phamViCongBo', 'mucDoRiengTu', 'mucKiemChung',
+          'daDuocPhepCongBo', 'coThongTinNhayCam', 'ownerId', 'createdAt', 'updatedAt'
+        ])
+        && data.keys().hasOnly([
+          'id', 'tenTaiLieu', 'loaiTaiLieu', 'nguoiTao', 'nguoiNhan',
+          'thoiGianTao', 'namUocLuong', 'diaDiem', 'tomTat',
+          'noiDungPhienAm', 'noiDungBienTap', 'ngonNgu', 'tinhTrangTaiLieu',
+          'nguoiLuuGiu', 'nguonGoc', 'phamViCongBo', 'mucDoRiengTu',
+          'mucKiemChung', 'daDuocPhepCongBo', 'coThongTinNhayCam', 'laDuLieuMau',
+          'ghiChu', 'danhSachAnh', 'chuThichTuNgu', 'taiLieuLienQuanIds',
+          'dublinCore', 'ownerId', 'createdAt', 'updatedAt'
+        ])
+        && data.id is string && isValidId(data.id) && data.id.size() >= 2 && data.id.size() <= 64
+        && data.tenTaiLieu is string && data.tenTaiLieu.size() >= 2 && data.tenTaiLieu.size() <= 240
+        && data.loaiTaiLieu is string && data.loaiTaiLieu.size() <= 40 && isValidDocumentCategory(data.loaiTaiLieu)
+        && data.nguoiTao is string && data.nguoiTao.size() >= 1 && data.nguoiTao.size() <= 160
+        && (!('nguoiNhan' in data) || data.nguoiNhan == null || (data.nguoiNhan is string && data.nguoiNhan.size() <= 160))
+        && data.thoiGianTao is string && data.thoiGianTao.size() >= 1 && data.thoiGianTao.size() <= 100
+        && (!('namUocLuong' in data) || data.namUocLuong == null || (data.namUocLuong is int && data.namUocLuong >= 1800 && data.namUocLuong <= 2100))
+        && data.diaDiem is string && data.diaDiem.size() >= 1 && data.diaDiem.size() <= 200
+        && data.tomTat is string && data.tomTat.size() >= 1 && data.tomTat.size() <= 1500
+        && data.noiDungPhienAm is string && data.noiDungPhienAm.size() >= 1 && data.noiDungPhienAm.size() <= 12000
+        && data.noiDungBienTap is string && data.noiDungBienTap.size() >= 1 && data.noiDungBienTap.size() <= 12000
+        && data.ngonNgu is string && data.ngonNgu.size() >= 1 && data.ngonNgu.size() <= 60
+        && data.tinhTrangTaiLieu is string && data.tinhTrangTaiLieu.size() >= 1 && data.tinhTrangTaiLieu.size() <= 500
+        && data.nguoiLuuGiu is string && data.nguoiLuuGiu.size() >= 1 && data.nguoiLuuGiu.size() <= 160
+        && data.nguonGoc is string && data.nguonGoc.size() >= 1 && data.nguonGoc.size() <= 500
+        && data.phamViCongBo is string && data.phamViCongBo.size() >= 1 && data.phamViCongBo.size() <= 300
+        && data.mucDoRiengTu is string && data.mucDoRiengTu.size() <= 60 && isValidPrivacyLevel(data.mucDoRiengTu)
+        && data.mucKiemChung is string && data.mucKiemChung.size() <= 40 && isValidVerificationStatus(data.mucKiemChung)
+        && data.daDuocPhepCongBo is bool
+        && data.coThongTinNhayCam is bool
+        && (!('laDuLieuMau' in data) || data.laDuLieuMau is bool)
+        && (!('ghiChu' in data) || (data.ghiChu is string && data.ghiChu.size() <= 3000))
+        && (!('danhSachAnh' in data) || (data.danhSachAnh is list && data.danhSachAnh.size() <= 10 && (data.danhSachAnh.size() == 0 || data.danhSachAnh[0] is map)))
+        && (!('chuThichTuNgu' in data) || (data.chuThichTuNgu is list && data.chuThichTuNgu.size() <= 30 && (data.chuThichTuNgu.size() == 0 || data.chuThichTuNgu[0] is map)))
+        && (!('taiLieuLienQuanIds' in data) || (data.taiLieuLienQuanIds is list && data.taiLieuLienQuanIds.size() <= 20 && (data.taiLieuLienQuanIds.size() == 0 || data.taiLieuLienQuanIds[0] is string)))
+        && (!('dublinCore' in data) || data.dublinCore is map)
+        && data.ownerId is string && isValidId(data.ownerId)
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidContribution(data, docId) {
+      return data.keys().hasAll(['id', 'docId', 'docOwnerId', 'docPrivacy', 'authorUid', 'ngay', 'nguoiThucHien', 'quanHe', 'hanhDong', 'noiDung', 'createdAt'])
+        && data.keys().hasOnly(['id', 'docId', 'docOwnerId', 'docPrivacy', 'authorUid', 'ngay', 'nguoiThucHien', 'quanHe', 'hanhDong', 'noiDung', 'createdAt'])
+        && data.id is string && isValidId(data.id)
+        && data.docId is string && data.docId == docId && isValidId(data.docId)
+        && data.docOwnerId is string && isValidId(data.docOwnerId)
+        && data.docPrivacy is string && data.docPrivacy.size() <= 60 && isValidPrivacyLevel(data.docPrivacy)
+        && data.authorUid is string && data.authorUid == request.auth.uid && isValidId(data.authorUid)
+        && data.ngay is string && data.ngay.size() >= 4 && data.ngay.size() <= 32
+        && data.nguoiThucHien is string && data.nguoiThucHien.size() >= 1 && data.nguoiThucHien.size() <= 160
+        && data.quanHe is string && data.quanHe.size() >= 1 && data.quanHe.size() <= 120
+        && data.hanhDong is string && data.hanhDong.size() >= 1 && data.hanhDong.size() <= 200
+        && data.noiDung is string && data.noiDung.size() >= 1 && data.noiDung.size() <= 3000
+        && data.createdAt is timestamp;
+    }
+
+    function isPublicReadableDoc(docData) {
+      return docData.mucDoRiengTu == 'Công khai rộng rãi'
+        && docData.daDuocPhepCongBo == true
+        && docData.coThongTinNhayCam == false;
+    }
+
+    // List-safe check without get()/exists()
+    function isListAccessibleDoc(docData) {
+      return isPublicReadableDoc(docData)
+        || (isVerifiedUser() && (
+          docData.ownerId == request.auth.uid ||
+          docData.mucDoRiengTu in ['Công khai rộng rãi', 'Công khai trong gia đình', 'Nội bộ dòng họ'] ||
+          isBootstrapAdmin()
+        ));
+    }
+
+    function isFamilyAccessibleDoc(docData) {
+      return isListAccessibleDoc(docData) || isAdmin();
+    }
+
+    // === Collections ===
+
+    match /admins/{adminUid} {
+      allow get: if isOwner(adminUid) || isAdmin();
+      allow list, write: if false;
+    }
+
+    // Split User Collection (Public display info vs Private PII)
+    match /users/{userId} {
+      allow get: if isValidId(userId) && isVerifiedUser();
+      allow list: if false;
+      allow create: if isValidId(userId)
+        && isOwner(userId)
+        && isValidUserPublic(incoming(), userId)
+        && incoming().updatedAt == request.time;
+      allow update: if isValidId(userId)
+        && isOwner(userId)
+        && isValidUserPublic(incoming(), userId)
+        && incoming().diff(existing()).affectedKeys().hasOnly(['displayName', 'familyRelation', 'updatedAt'])
+        && incoming().uid == existing().uid
+        && incoming().updatedAt == request.time;
+      allow delete: if false;
+
+      match /private/{privateDocId} {
+        allow get: if isValidId(userId) && isValidId(privateDocId) && (isOwner(userId) || isAdmin());
+        allow list: if false;
+        allow create: if isValidId(userId)
+          && privateDocId == 'profile'
+          && isOwner(userId)
+          && isValidUserPrivate(incoming(), userId)
+          && incoming().createdAt == request.time;
+        allow update: if isValidId(userId)
+          && privateDocId == 'profile'
+          && (isOwner(userId) || isAdmin())
+          && isValidUserPrivate(incoming(), userId)
+          && incoming().diff(existing()).affectedKeys().hasOnly(['email'])
+          && incoming().uid == existing().uid
+          && incoming().createdAt == existing().createdAt;
+        allow delete: if false;
+      }
+    }
+
+    // Archive Documents Collection
+    match /documents/{docId} {
+      allow get: if isValidId(docId) && isFamilyAccessibleDoc(existing());
+      allow list: if isListAccessibleDoc(existing());
+
+      allow create: if isVerifiedUser()
+        && isValidId(docId)
+        && isValidArchiveDocument(incoming())
+        && incoming().id == docId
+        && incoming().ownerId == request.auth.uid
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+
+      allow update: if isVerifiedUser()
+        && isValidId(docId)
+        && isValidArchiveDocument(incoming())
+        && incoming().id == existing().id
+        && incoming().ownerId == existing().ownerId
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && (
+          // Tier 1: Admin override
+          isAdmin() ||
+          // Tier 1: Document custodian/owner updating metadata & editorial content
+          (
+            existing().ownerId == request.auth.uid &&
+            incoming().diff(existing()).affectedKeys().hasOnly([
+              'tenTaiLieu', 'nguoiTao', 'nguoiNhan', 'thoiGianTao', 'namUocLuong',
+              'diaDiem', 'tomTat', 'noiDungBienTap', 'tinhTrangTaiLieu',
+              'nguoiLuuGiu', 'nguonGoc', 'phamViCongBo', 'mucDoRiengTu',
+              'mucKiemChung', 'daDuocPhepCongBo', 'coThongTinNhayCam',
+              'ghiChu', 'chuThichTuNgu', 'taiLieuLienQuanIds', 'dublinCore', 'updatedAt'
+            ])
+          ) ||
+          // Tier 2: Verified family member contributing editorial review/notes without altering original transcription or images
+          (
+            existing().mucDoRiengTu != 'Hạn chế — Chỉ người lưu giữ' &&
+            incoming().diff(existing()).affectedKeys().hasOnly([
+              'noiDungBienTap', 'ghiChu', 'mucKiemChung', 'chuThichTuNgu',
+              'taiLieuLienQuanIds', 'nguoiTao', 'diaDiem', 'updatedAt'
+            ])
+          )
+        );
+
+      allow delete: if isValidId(docId) && (isAdmin() || (isVerifiedUser() && existing().ownerId == request.auth.uid));
+
+      // Subcollection: Contribution & Verification History (Master Gate pattern)
+      match /contributions/{contributionId} {
+        allow get: if isValidId(docId) && isValidId(contributionId)
+          && exists(/databases/$(database)/documents/documents/$(docId))
+          && isFamilyAccessibleDoc(get(/databases/$(database)/documents/documents/$(docId)).data);
+
+        allow list: if isVerifiedUser()
+          && (
+            existing().docPrivacy != 'Hạn chế — Chỉ người lưu giữ' ||
+            existing().docOwnerId == request.auth.uid ||
+            isBootstrapAdmin()
+          );
+
+        allow create: if isVerifiedUser()
+          && isValidId(docId)
+          && isValidId(contributionId)
+          && isValidContribution(incoming(), docId)
+          && incoming().id == contributionId
+          && incoming().createdAt == request.time
+          && exists(/databases/$(database)/documents/documents/$(docId))
+          && incoming().docOwnerId == get(/databases/$(database)/documents/documents/$(docId)).data.ownerId
+          && incoming().docPrivacy == get(/databases/$(database)/documents/documents/$(docId)).data.mucDoRiengTu
+          && (
+            get(/databases/$(database)/documents/documents/$(docId)).data.mucDoRiengTu != 'Hạn chế — Chỉ người lưu giữ' ||
+            get(/databases/$(database)/documents/documents/$(docId)).data.ownerId == request.auth.uid ||
+            isAdmin()
+          );
+
+        allow update, delete: if false;
+      }
+    }
+  }
+}

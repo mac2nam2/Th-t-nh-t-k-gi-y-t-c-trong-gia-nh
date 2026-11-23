@@ -1,0 +1,6 @@
+{
+  "name": "Ký Ức Gia Đình — Hồ Sơ Lưu Trữ Tư Liệu",
+  "description": "Hồ sơ số lưu trữ thư từ, nhật ký, giấy tờ và hình ảnh cũ trong gia đình qua các thế hệ, hỗ trợ bảo quản ký ức, tra cứu nguồn gốc và phiên âm tài liệu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

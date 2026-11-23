@@ -1,0 +1,482 @@
+{
+  "tenKhoLuuTru": "Hồ Sơ Số Gia Đình — Ký Ức Qua Các Thế Hệ",
+  "moTaKho": "Kho lưu trữ thư từ, nhật ký, giấy tờ tùy thân, bằng cấp và ảnh chụp gia đình qua nhiều thế hệ, giúp bảo quản ký ức và tra cứu nguồn gốc tài liệu.",
+  "phienBanDuLieu": "1.0",
+  "ngayCapNhatCuoi": "2026-11-23",
+  "chuanMoTa": "Dublin Core Metadata Element Set (DCMES 1.1) kết hợp trường bảo quản gia đình",
+  "thuMucAnh": "/tailieu-anh",
+  "ghiChuDuLieuMau": "Các bản ghi khởi tạo dưới đây là bộ dữ liệu mẫu minh họa cấu trúc hồ sơ số và tính năng phóng to/phiên âm, không phải hiện vật lịch sử thật. Thành viên gia đình có thể tải lên ảnh chụp tài liệu thật để thay thế hoặc bổ sung.",
+  "hoSoTaiLieu": [
+    {
+      "id": "TL-1968-001",
+      "tenTaiLieu": "Thư gửi Mẹ và các em từ Hà Nội (14/10/1968)",
+      "loaiTaiLieu": "Thư từ",
+      "nguoiTao": "Nguyễn Văn Đức",
+      "nguoiNhan": "Mẹ và các em (chưa rõ địa chỉ cụ thể trên tờ thư)",
+      "thoiGianTao": "14/10/1968",
+      "namUocLuong": 1968,
+      "diaDiem": "Hà Nội",
+      "tomTat": "Bức thư viết tay gửi về quê báo tin bình an, hỏi thăm sức khỏe của mẹ và các em cùng tình hình mùa màng ở quê nhà.",
+      "noiDungPhienAm": "Hà Nội, ngày 14 tháng 10 năm 1968\n\nKính gửi Mẹ và các em,\n\nHôm nay con viết thư này để báo tin cho gia đình ở quê biết là con vẫn bình an và khỏe mạnh.\nCông việc ở đây tuy vất vả nhưng con luôn cố gắng hoàn thành nhiệm vụ...\nMẹ và các em ở nhà có khỏe không? Tình hình mùa màng ra sao? Nhớ Mẹ và cả nhà rất nhiều...\nHy vọng thư này đến tay Mẹ sớm. Con sẽ cố gắng viết thư thường xuyên hơn...\n\nCon trai của Mẹ,\n[Chữ ký viết tay chưa đọc rõ nét]\nNguyễn Văn Đức",
+      "noiDungBienTap": "Bức thư đề ngày 14 tháng 10 năm 1968 tại Hà Nội do ông Nguyễn Văn Đức viết gửi về cho mẹ và các em ở quê. Nội dung báo tin bình an, chia sẻ công việc vất vả nhưng vẫn cố gắng, đồng thời ân cần hỏi thăm sức khỏe gia đình và mùa màng. Phần chữ ký viết nối nét phía trên họ tên được giữ nguyên ghi chú chưa rõ nét để chờ đối chiếu thêm.",
+      "ngonNgu": "Tiếng Việt",
+      "tinhTrangTaiLieu": "Giấy thư hàng không ngả vàng, có hai nếp gấp ngang và một nếp gấp dọc, mép giấy sờn nhẹ, mực bút máy xanh đen còn rõ.",
+      "nguoiLuuGiu": "Bà Nguyễn Thị Lan (em gái người viết)",
+      "nguonGoc": "Hộp thư kỷ niệm gia đình tại quê Hà Nam (bản mẫu minh họa quy trình số hóa).",
+      "phamViCongBo": "Được phép chia sẻ trong đại gia đình; không đăng tải công khai bên ngoài.",
+      "mucDoRiengTu": "Công khai trong gia đình",
+      "mucKiemChung": "Đã kiểm chứng",
+      "daDuocPhepCongBo": true,
+      "coThongTinNhayCam": false,
+      "laDuLieuMau": true,
+      "ghiChu": "Phong bì gốc không còn kèm theo nên chưa rõ địa chỉ nơi nhận ở quê. Ảnh đính kèm là ảnh mẫu minh họa phục vụ thử nghiệm trình xem phóng to.",
+      "danhSachAnh": [
+        {
+          "tep": "/tailieu-anh/TL-1968-001-thu-gui-me.jpg",
+          "loaiAnh": "Bản quét gốc",
+          "chuThich": "Ảnh mẫu minh họa: mặt trước tờ thư viết tay đề ngày 14/10/1968.",
+          "nguonAnh": "Tệp mẫu minh họa trong thư mục /tailieu-anh (không phải hiện vật lịch sử thật)."
+        }
+      ],
+      "chuThichTuNgu": [
+        {
+          "tuNgu": "Giấy Par Avion (thư hàng không)",
+          "giaiThich": "Loại giấy viết thư mỏng có viền sọc xanh đỏ phổ biến giai đoạn 1960–1980 nhằm giảm trọng lượng khi gửi bưu điện."
+        },
+        {
+          "tuNgu": "Mùa màng",
+          "giaiThich": "Cách gọi chung các vụ thu hoạch lúa và hoa màu nông nghiệp ở nông thôn."
+        }
+      ],
+      "taiLieuLienQuanIds": ["TL-1954-003", "TL-1974-002"],
+      "lichSuBoSung": [
+        {
+          "id": "LS-001",
+          "ngay": "2024-08-12",
+          "nguoiThucHien": "Bà Nguyễn Thị Lan",
+          "quanHe": "Em gái người viết",
+          "hanhDong": "Cung cấp bản gốc và xác nhận thông tin",
+          "noiDung": "Xác nhận nét chữ của anh trai Nguyễn Văn Đức viết từ Hà Nội gửi về gia đình."
+        },
+        {
+          "id": "LS-002",
+          "ngay": "2024-09-03",
+          "nguoiThucHien": "Trần Minh Tuấn",
+          "quanHe": "Cháu ngoại",
+          "hanhDong": "Chụp bản quét và phiên âm nguyên văn",
+          "noiDung": "Gõ lại nguyên văn nội dung chữ viết tay và giữ nguyên phần chữ ký chưa rõ nét."
+        }
+      ],
+      "dublinCore": {
+        "identifier": "TL-1968-001",
+        "title": "Thư gửi Mẹ và các em từ Hà Nội (14/10/1968)",
+        "creator": "Nguyễn Văn Đức",
+        "subject": "Thư từ gia đình; Ký ức thời chiến; Hà Nội 1968",
+        "description": "Bức thư viết tay gửi về quê báo tin bình an và hỏi thăm gia đình.",
+        "publisher": "Kho Lưu Trữ Gia Đình",
+        "contributor": "Bà Nguyễn Thị Lan; Trần Minh Tuấn",
+        "date": "1968-10-14",
+        "type": "Text / Thư từ",
+        "format": "image/jpeg",
+        "source": "Hộp thư kỷ niệm gia đình tại quê Hà Nam (mẫu minh họa)",
+        "language": "vi",
+        "relation": "TL-1954-003; TL-1974-002",
+        "coverage": "Hà Nội, Việt Nam (1968)",
+        "rights": "Công khai trong gia đình"
+      }
+    },
+    {
+      "id": "TL-1974-002",
+      "tenTaiLieu": "Sổ nhật ký hành trình tháng 4 năm 1974 (trang 14–15)",
+      "loaiTaiLieu": "Nhật ký",
+      "nguoiTao": "Chưa rõ",
+      "nguoiNhan": null,
+      "thoiGianTao": "14/04/1974 – 15/04/1974",
+      "namUocLuong": 1974,
+      "diaDiem": "Chưa rõ (trong sổ ghi hướng di chuyển về phía Tây Bắc)",
+      "tomTat": "Hai trang sổ tay ghi lại hành trình đi bộ về phía Tây Bắc giữa tháng 4 năm 1974, bày tỏ nỗi nhớ nhà và mong ngày thống nhất.",
+      "noiDungPhienAm": "Nhật ký năm 1974\n\n[Trang trái]\nChủ Nhật, 14 Tháng 4 năm 1974\nNgày hôm nay trời đẹp, tôi thức dậy sớm. Chúng tôi bắt đầu di chuyển về phía Tây Bắc, đi bộ rất xa. Ăn cơm vội vàng [chữ mờ chưa rõ: m tồng?] bên bờ suối. Mệt mỏi nhưng tinh thần vẫn cao...\n\n[Trang phải]\nThứ Hai, 15 Tháng 4\nTiếp tục hành trình. Rừng rậm hơn, đường đi khó khăn. Chúng tôi trú ẩn dưới tán cây lớn. Nhớ nhà quá, mong ngày đất nước thống nhất. 18h: Nghỉ chân. Đêm nay lạnh.\n[Chưa ghi họ tên người ký]",
+      "noiDungBienTap": "Hai trang nhật ký đề ngày 14 và 15 tháng 4 năm 1974 ghi lại chặng di chuyển đường dài về hướng Tây Bắc. Tác giả cuốn sổ hiện chưa rõ danh tính do trang đầu bị mất và cuối trang không ký tên; cần chờ các thành viên lớn tuổi đối chiếu nét chữ để xác nhận.",
+      "ngonNgu": "Tiếng Việt",
+      "tinhTrangTaiLieu": "Sổ tay bìa vải tối màu gáy chỉ khâu bung nhẹ, giấy kẻ ngang ngả vàng, có vết ẩm và vết ố tròn trên trang phải.",
+      "nguoiLuuGiu": "Ông Trần Văn Hòa",
+      "nguonGoc": "Ngăn tủ gỗ cũ của ông bà ngoại (bản mẫu minh họa).",
+      "phamViCongBo": "Chỉ chia sẻ trong nội bộ dòng họ để nhờ nhận diện nét chữ.",
+      "mucDoRiengTu": "Nội bộ dòng họ",
+      "mucKiemChung": "Đang chờ đối chiếu",
+      "daDuocPhepCongBo": false,
+      "coThongTinNhayCam": false,
+      "laDuLieuMau": true,
+      "ghiChu": "Tác giả và địa điểm cụ thể đều ở trạng thái chưa rõ, tuyệt đối không suy đoán khi chưa có người thân xác nhận.",
+      "danhSachAnh": [
+        {
+          "tep": "/tailieu-anh/TL-1974-002-nhat-ky-hanh-trinh.jpg",
+          "loaiAnh": "Ảnh chụp gốc",
+          "chuThich": "Ảnh mẫu minh họa: hai trang mở đôi sổ nhật ký ngày 14–15/4/1974.",
+          "nguonAnh": "Tệp mẫu minh họa trong thư mục /tailieu-anh (không phải hiện vật lịch sử thật)."
+        }
+      ],
+      "chuThichTuNgu": [
+        {
+          "tuNgu": "Cơm vội bên bờ suối",
+          "giaiThich": "Bữa ăn nhanh bằng cơm nắm hoặc lương khô mang theo khi di chuyển đường dài qua vùng núi."
+        }
+      ],
+      "taiLieuLienQuanIds": ["TL-1968-001"],
+      "lichSuBoSung": [
+        {
+          "id": "LS-003",
+          "ngay": "2023-11-18",
+          "nguoiThucHien": "Ông Trần Văn Hòa",
+          "quanHe": "Người lưu giữ hiện nay",
+          "hanhDong": "Ghi nhận nguồn gốc phát hiện",
+          "noiDung": "Phát hiện cuốn sổ trong tủ gỗ cũ, tạm ghi tác giả là chưa rõ để chờ đối chiếu."
+        }
+      ],
+      "dublinCore": {
+        "identifier": "TL-1974-002",
+        "title": "Sổ nhật ký hành trình tháng 4 năm 1974 (trang 14–15)",
+        "creator": "Chưa rõ",
+        "subject": "Nhật ký cá nhân; Hành trình năm 1974",
+        "description": "Ghi chép hai ngày hành trình hướng Tây Bắc giữa tháng 4/1974.",
+        "publisher": "Kho Lưu Trữ Gia Đình",
+        "contributor": "Ông Trần Văn Hòa",
+        "date": "1974-04-14",
+        "type": "Text / Nhật ký",
+        "format": "image/jpeg",
+        "source": "Tủ gỗ kỷ vật gia đình bên ngoại (mẫu minh họa)",
+        "language": "vi",
+        "relation": "TL-1968-001",
+        "coverage": "Chưa rõ địa điểm cụ thể",
+        "rights": "Nội bộ dòng họ"
+      }
+    },
+    {
+      "id": "TL-1954-003",
+      "tenTaiLieu": "Giấy khai sinh — Trần Văn Hòa (1954)",
+      "loaiTaiLieu": "Giấy khai sinh",
+      "nguoiTao": "Ủy ban Hành chính TP Hà Nội",
+      "nguoiNhan": "Gia đình ông Trần Văn Bình và bà Nguyễn Thị Mai",
+      "thoiGianTao": "18/05/1954",
+      "namUocLuong": 1954,
+      "diaDiem": "Hà Nội (chi tiết địa chỉ được bảo vệ riêng tư)",
+      "tomTat": "Giấy khai sinh lập tháng 5/1954 ghi nhận ngày sinh và thông tin cha mẹ của ông Trần Văn Hòa tại Hà Nội. Do chứa số giấy tờ và địa chỉ nhà, tài liệu được đặt ở chế độ hạn chế quyền truy cập.",
+      "noiDungPhienAm": "VIỆT NAM\nGIẤY KHAI SINH\nSố: [Ẩn số giấy tờ ở chế độ công khai: 148/1954]\n\nHỌ VÀ TÊN TRẺ: Trần Văn Hòa\nNgày và nơi sinh: 12 tháng 5 năm 1954 tại Bệnh viện Bạch Mai, Hà Nội\nHỌ VÀ TÊN CHA: Trần Văn Bình (Nghề nghiệp: Công chức)\nTrú quán: [Thông tin địa chỉ riêng tư: 42 Phố Hàng Bạc, Hà Nội]\nHỌ VÀ TÊN MẸ: Nguyễn Thị Mai (Nghề nghiệp: Nội trợ)\n\n[Dòng viết tay phía trên dấu đỏ bị mờ, chỉ đọc được phần cuối: ... 18/5/1954]\n[Dấu tròn đỏ: ỦY BAN HÀNH CHÍNH TP HÀ NỘI - CHỨNG THỰC - 18/5/1954]",
+      "noiDungBienTap": "Giấy khai sinh xác nhận ông Trần Văn Hòa sinh ngày 12/5/1954 tại Hà Nội, cha là Trần Văn Bình và mẹ là Nguyễn Thị Mai. Một số dòng chữ viết tay phía trên dấu chứng thực đã bị nhòe theo thời gian nên giữ nguyên đánh dấu chưa rõ. Địa chỉ cư trú cũ và số giấy tờ chỉ hiển thị cho người lưu giữ có quyền truy cập.",
+      "ngonNgu": "Tiếng Việt",
+      "tinhTrangTaiLieu": "Giấy chứng từ cũ ngả vàng, quăn nhẹ 4 góc, có nếp gấp ngang giữa tờ và phần mực viết tay phía trên con dấu bị nhòe.",
+      "nguoiLuuGiu": "Ông Trần Văn Hòa",
+      "nguonGoc": "Tập hồ sơ hộ tịch gia đình (bản mẫu minh họa).",
+      "phamViCongBo": "Hạn chế — Chỉ hiển thị đầy đủ khi được người lưu giữ cho phép vì có số giấy tờ và địa chỉ cá nhân.",
+      "mucDoRiengTu": "Hạn chế — Chỉ người lưu giữ",
+      "mucKiemChung": "Đã kiểm chứng",
+      "daDuocPhepCongBo": false,
+      "coThongTinNhayCam": true,
+      "laDuLieuMau": true,
+      "ghiChu": "Tài liệu chứa thông tin cá nhân nhạy cảm (địa chỉ cũ, số giấy tờ), không tự động công khai ra ngoài phạm vi cho phép.",
+      "danhSachAnh": [
+        {
+          "tep": "/tailieu-anh/TL-1954-003-giay-khai-sinh.jpg",
+          "loaiAnh": "Bản quét gốc",
+          "chuThich": "Ảnh mẫu minh họa: bản giấy khai sinh năm 1954 có dấu chứng thực.",
+          "nguonAnh": "Tệp mẫu minh họa trong thư mục /tailieu-anh (không phải hiện vật lịch sử thật)."
+        }
+      ],
+      "chuThichTuNgu": [
+        {
+          "tuNgu": "Trú quán",
+          "giaiThich": "Thuật ngữ hành chính cũ chỉ nơi cư trú thường xuyên của hộ gia đình tại thời điểm đăng ký."
+        },
+        {
+          "tuNgu": "Ủy ban Hành chính",
+          "giaiThich": "Tên gọi cơ quan hành chính địa phương trước khi đổi tên thành Ủy ban Nhân dân."
+        }
+      ],
+      "taiLieuLienQuanIds": ["TL-1968-001", "TL-1962-006", "TL-1965-007"],
+      "lichSuBoSung": [
+        {
+          "id": "LS-004",
+          "ngay": "2024-02-10",
+          "nguoiThucHien": "Ông Trần Văn Hòa",
+          "quanHe": "Người lưu giữ & chủ thể giấy tờ",
+          "hanhDong": "Kiểm chứng bản gốc và đặt mức hạn chế riêng tư",
+          "noiDung": "Yêu cầu ẩn địa chỉ nhà cũ và số giấy tờ ở chế độ công khai."
+        }
+      ],
+      "dublinCore": {
+        "identifier": "TL-1954-003",
+        "title": "Giấy khai sinh — Trần Văn Hòa (1954)",
+        "creator": "Ủy ban Hành chính TP Hà Nội",
+        "subject": "Giấy khai sinh; Hộ tịch gia đình",
+        "description": "Chứng nhận khai sinh năm 1954 tại Hà Nội (tài liệu có trường riêng tư).",
+        "publisher": "Kho Lưu Trữ Gia Đình",
+        "contributor": "Ông Trần Văn Hòa",
+        "date": "1954-05-18",
+        "type": "Text / Giấy khai sinh",
+        "format": "image/jpeg",
+        "source": "Tập hồ sơ hộ tịch gia đình (mẫu minh họa)",
+        "language": "vi",
+        "relation": "TL-1968-001; TL-1962-006",
+        "coverage": "Hà Nội, Việt Nam (1954)",
+        "rights": "Hạn chế — Chỉ người lưu giữ"
+      }
+    },
+    {
+      "id": "TL-1982-004",
+      "tenTaiLieu": "Bằng tốt nghiệp Trung học phổ thông — Lê Văn Bình (1982)",
+      "loaiTaiLieu": "Giấy chứng nhận",
+      "nguoiTao": "Trường THPT Chu Văn An, Hà Nội (Hiệu trưởng Nguyễn Văn Lâm ký)",
+      "nguoiNhan": "Lê Văn Bình",
+      "thoiGianTao": "28/06/1982",
+      "namUocLuong": 1982,
+      "diaDiem": "Hà Nội",
+      "tomTat": "Bằng tốt nghiệp Trung học phổ thông cấp ngày 28/6/1982 cho ông Lê Văn Bình (sinh 12/5/1964), khóa thi tại Trường THPT Chu Văn An.",
+      "noiDungPhienAm": "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\nĐỘC LẬP - TỰ DO - HẠNH PHÚC\n\nBẰNG TỐT NGHIỆP TRUNG HỌC PHỔ THÔNG\nHọ và tên: LÊ VĂN BÌNH\nSinh ngày: 12 tháng 05 năm 1964, Nơi sinh: Hà Nội\nKhóa thi năm: 1982\nTại Hội đồng thi: Trường THPT Chu Văn An\nĐã trúng tuyển Kỳ thi Tốt nghiệp Trung học phổ thông và [chữ in bị mờ/lỗi phôi: lược hạn nhận?] có tốt nghiệp.\n\nHà Nội, ngày 28 tháng 06 năm 1982\nHIỆU TRƯỞNG\n[Chữ ký] Nguyễn Văn Lâm\n[Dấu tròn đỏ: SỞ GIÁO DỤC VÀ ĐÀO TẠO HÀ NỘI - TRƯỜNG THPT CHU VĂN AN]",
+      "noiDungBienTap": "Bằng tốt nghiệp THPT năm 1982 của ông Lê Văn Bình tại Trường THPT Chu Văn An, Hà Nội, có chữ ký của Hiệu trưởng Nguyễn Văn Lâm. Tài liệu được chủ sở hữu cho phép công khai để con cháu tìm hiểu truyền thống học tập của gia đình.",
+      "ngonNgu": "Tiếng Việt",
+      "tinhTrangTaiLieu": "Giấy bìa dày màu ngà có khung hoa văn cổ điển, mặt giấy phẳng và bảo quản tốt.",
+      "nguoiLuuGiu": "Ông Lê Văn Bình",
+      "nguonGoc": "Cặp hồ sơ học tập cá nhân của ông Lê Văn Bình (bản mẫu minh họa).",
+      "phamViCongBo": "Đã được ông Lê Văn Bình cho phép công khai để phục vụ tìm hiểu lịch sử học tập gia đình.",
+      "mucDoRiengTu": "Công khai rộng rãi",
+      "mucKiemChung": "Đã kiểm chứng",
+      "daDuocPhepCongBo": true,
+      "coThongTinNhayCam": false,
+      "laDuLieuMau": true,
+      "ghiChu": "Trên phôi in có một cụm chữ bị nhòe nét mực ('lược hạn nhận' thay cho 'được công nhận'), được giữ nguyên chú thích trong bản phiên âm.",
+      "danhSachAnh": [
+        {
+          "tep": "/tailieu-anh/TL-1982-004-bang-tot-nghiep.jpg",
+          "loaiAnh": "Bản quét gốc",
+          "chuThich": "Ảnh mẫu minh họa: bằng tốt nghiệp THPT năm 1982.",
+          "nguonAnh": "Tệp mẫu minh họa trong thư mục /tailieu-anh (không phải hiện vật lịch sử thật)."
+        }
+      ],
+      "chuThichTuNgu": [
+        {
+          "tuNgu": "Hội đồng thi",
+          "giaiThich": "Địa điểm tổ chức kỳ thi tốt nghiệp tập trung của nhiều lớp hoặc nhiều trường."
+        }
+      ],
+      "taiLieuLienQuanIds": ["TL-1977-005"],
+      "lichSuBoSung": [
+        {
+          "id": "LS-005",
+          "ngay": "2025-01-15",
+          "nguoiThucHien": "Lê Ngọc Hà",
+          "quanHe": "Con gái ông Lê Văn Bình",
+          "hanhDong": "Số hóa và xin phép công bố",
+          "noiDung": "Ông Lê Văn Bình đồng ý chia sẻ công khai hồ sơ tốt nghiệp cho con cháu tra cứu."
+        }
+      ],
+      "dublinCore": {
+        "identifier": "TL-1982-004",
+        "title": "Bằng tốt nghiệp Trung học phổ thông — Lê Văn Bình (1982)",
+        "creator": "Trường THPT Chu Văn An, Hà Nội",
+        "subject": "Văn bằng giáo dục; Lịch sử học tập gia đình",
+        "description": "Bằng tốt nghiệp THPT cấp ngày 28/6/1982 cho ông Lê Văn Bình.",
+        "publisher": "Kho Lưu Trữ Gia Đình",
+        "contributor": "Ông Lê Văn Bình; Lê Ngọc Hà",
+        "date": "1982-06-28",
+        "type": "Text / Giấy chứng nhận",
+        "format": "image/jpeg",
+        "source": "Hồ sơ cá nhân ông Lê Văn Bình (mẫu minh họa)",
+        "language": "vi",
+        "relation": "TL-1977-005",
+        "coverage": "Hà Nội, Việt Nam (1982)",
+        "rights": "Công khai rộng rãi"
+      }
+    },
+    {
+      "id": "TL-1977-005",
+      "tenTaiLieu": "Giấy giới thiệu công tác & Sổ giấy phép đi lại (1977)",
+      "loaiTaiLieu": "Giấy tờ cá nhân",
+      "nguoiTao": "Ban Quản lý Lâm nghiệp tỉnh Đồng Nai & Công an tỉnh Tây Ninh",
+      "nguoiNhan": "Ông Lê Văn Minh",
+      "thoiGianTao": "10/06/1977 – 25/06/1977",
+      "namUocLuong": 1977,
+      "diaDiem": "Đồng Nai – Tây Ninh",
+      "tomTat": "Giấy giới thiệu công tác và sổ giấy phép đi lại năm 1977 của kỹ thuật viên Lê Văn Minh (sinh 1951, quê Hà Nam) đi công tác từ Trạm Lâm nghiệp Vĩnh An sang Tây Ninh.",
+      "noiDungPhienAm": "[Tờ trái] GIẤY GIỚI THIỆU CÔNG TÁC\nSố: [Ẩn số giấy tờ ở chế độ công khai: 45/GGT]  Năm: 1977\nBAN QUẢN LÝ LÂM NGHIỆP TỈNH ĐỒNG NAI\nĐồng chí: LÊ VĂN MINH — Chức vụ: Kỹ thuật viên\nCông tác tại: Trạm Lâm nghiệp Vĩnh An\nĐi công tác tại: Tỉnh Tây Ninh (Ban Nông nghiệp), từ 15/6/1977 đến 30/6/1977\n[Địa danh ký chưa rõ cách viết: Hòa Bình?], ngày 10/6/1977 — Lê Đức Thắng [ký, đóng dấu]\n\n[Sổ bên phải — trang 4 & 5]\nHọ tên: LÊ VĂN MINH — Năm sinh: 1951 — Quê quán: Hà Nam\nGIẤY PHÉP ĐI LẠI - VIỆT NAM\n[Các dấu kiểm tra ngày 17/6/1977 và 25/6/1977]",
+      "noiDungBienTap": "Bộ giấy tờ công tác tháng 6 năm 1977 ghi nhận quá trình làm việc của ông Lê Văn Minh tại ngành lâm nghiệp tỉnh Đồng Nai và chuyến công tác sang tỉnh Tây Ninh. Một số thông tin số giấy tờ và con dấu cá nhân được phân loại hạn chế quyền truy cập công khai.",
+      "ngonNgu": "Tiếng Việt",
+      "tinhTrangTaiLieu": "Tờ giấy đánh máy chữ tím hơi ố góc phải; cuốn sổ bỏ túi bìa tối màu còn nguyên trang 4–5 và dấu mực đỏ.",
+      "nguoiLuuGiu": "Bà Phạm Thị Dung (vợ ông Lê Văn Minh)",
+      "nguonGoc": "Cặp tài liệu công tác cũ tại Đồng Nai (bản mẫu minh họa).",
+      "phamViCongBo": "Nội bộ dòng họ; không công khai số giấy tờ ra ngoài gia đình.",
+      "mucDoRiengTu": "Nội bộ dòng họ",
+      "mucKiemChung": "Đã kiểm chứng",
+      "daDuocPhepCongBo": false,
+      "coThongTinNhayCam": true,
+      "laDuLieuMau": true,
+      "ghiChu": "Địa danh viết tay 'Hòa Bình' phía trên chữ ký chưa rõ lý do ghi nhận trên giấy của tỉnh Đồng Nai, không tự suy đoán.",
+      "danhSachAnh": [
+        {
+          "tep": "/tailieu-anh/TL-1977-005-giay-gioi-thieu.jpg",
+          "loaiAnh": "Ảnh chụp gốc",
+          "chuThich": "Ảnh mẫu minh họa: giấy giới thiệu công tác và trang 4–5 sổ giấy phép đi lại năm 1977.",
+          "nguonAnh": "Tệp mẫu minh họa trong thư mục /tailieu-anh (không phải hiện vật lịch sử thật)."
+        }
+      ],
+      "chuThichTuNgu": [
+        {
+          "tuNgu": "Giấy phép đi lại",
+          "giaiThich": "Sổ thông hành nội địa dùng để xuất trình tại các trạm kiểm soát liên tỉnh khi đi công tác trong giai đoạn sau 1975."
+        }
+      ],
+      "taiLieuLienQuanIds": ["TL-1982-004"],
+      "lichSuBoSung": [
+        {
+          "id": "LS-006",
+          "ngay": "2024-12-05",
+          "nguoiThucHien": "Bà Phạm Thị Dung",
+          "quanHe": "Vợ ông Lê Văn Minh",
+          "hanhDong": "Cung cấp bản chụp và giải thích bối cảnh",
+          "noiDung": "Xác nhận ông Minh vào Đồng Nai công tác cuối năm 1976."
+        }
+      ],
+      "dublinCore": {
+        "identifier": "TL-1977-005",
+        "title": "Giấy giới thiệu công tác & Sổ giấy phép đi lại (1977)",
+        "creator": "Ban Quản lý Lâm nghiệp tỉnh Đồng Nai",
+        "subject": "Giấy tờ công tác; Đồng Nai – Tây Ninh 1977",
+        "description": "Bộ giấy giới thiệu và sổ đi lại công tác của ông Lê Văn Minh tháng 6/1977.",
+        "publisher": "Kho Lưu Trữ Gia Đình",
+        "contributor": "Bà Phạm Thị Dung",
+        "date": "1977-06-10",
+        "type": "Text / Giấy tờ cá nhân",
+        "format": "image/jpeg",
+        "source": "Hồ sơ công tác của ông Lê Văn Minh (mẫu minh họa)",
+        "language": "vi",
+        "relation": "TL-1982-004",
+        "coverage": "Đồng Nai và Tây Ninh, Việt Nam (1977)",
+        "rights": "Nội bộ dòng họ"
+      }
+    },
+    {
+      "id": "TL-1962-006",
+      "tenTaiLieu": "Ảnh đại gia đình ba thế hệ trước hiên nhà ngói (Sài Gòn, 1962)",
+      "loaiTaiLieu": "Ảnh chụp",
+      "nguoiTao": "Chưa rõ",
+      "nguoiNhan": null,
+      "thoiGianTao": "1962 (chưa rõ ngày tháng)",
+      "namUocLuong": 1962,
+      "diaDiem": "Sài Gòn",
+      "tomTat": "Bức ảnh đen trắng tông nâu chụp 7 người thuộc ba thế hệ trước sân gạch ngôi nhà mái ngói cổ tại Sài Gòn năm 1962. Danh tính từng người trong ảnh đang chờ gia đình đối chiếu.",
+      "noiDungPhienAm": "[Chú thích viết tay góc dưới bên phải viền ảnh]:\nSài Gòn, 1962",
+      "noiDungBienTap": "Tấm ảnh ghi lại cảnh sum họp của bảy thành viên trước hiên nhà mái ngói tại Sài Gòn năm 1962. Hiện chỉ có dòng chữ ghi địa điểm và năm ở góc viền ảnh; danh tính cụ thể của từng người và người chụp vẫn chưa rõ, đang chờ các cô bác lớn tuổi xác nhận.",
+      "ngonNgu": "Tiếng Việt",
+      "tinhTrangTaiLieu": "Ảnh giấy bạc gelatin viền răng cưa cổ điển, kích thước nhỏ, có nếp gập nhẹ ở mép trên.",
+      "nguoiLuuGiu": "Cô Trần Thị Thu",
+      "nguonGoc": "Album ảnh cũ của bà Nguyễn Thị Mai (bản mẫu minh họa).",
+      "phamViCongBo": "Lưu hành nội bộ trong gia đình để cùng nhận diện người thân.",
+      "mucDoRiengTu": "Công khai trong gia đình",
+      "mucKiemChung": "Đang chờ đối chiếu",
+      "daDuocPhepCongBo": true,
+      "coThongTinNhayCam": false,
+      "laDuLieuMau": true,
+      "ghiChu": "Chưa rõ tên cụ thể của từng người trong ảnh và chưa rõ ai là người chụp.",
+      "danhSachAnh": [
+        {
+          "tep": "/tailieu-anh/TL-1962-006-anh-gia-dinh.jpg",
+          "loaiAnh": "Bản quét gốc",
+          "chuThich": "Ảnh mẫu minh họa: tấm ảnh gia đình đề chú thích 'Sài Gòn, 1962'.",
+          "nguonAnh": "Tệp mẫu minh họa trong thư mục /tailieu-anh (không phải hiện vật lịch sử thật)."
+        }
+      ],
+      "chuThichTuNgu": [
+        {
+          "tuNgu": "Ảnh viền răng cưa",
+          "giaiThich": "Kiểu cắt mép ảnh đặc trưng của các hiệu ảnh Việt Nam thập niên 1950–1970."
+        }
+      ],
+      "taiLieuLienQuanIds": ["TL-1954-003", "TL-1965-007"],
+      "lichSuBoSung": [
+        {
+          "id": "LS-007",
+          "ngay": "2024-06-20",
+          "nguoiThucHien": "Cô Trần Thị Thu",
+          "quanHe": "Người lưu giữ hiện nay",
+          "hanhDong": "Đưa vào danh sách chờ nhận diện",
+          "noiDung": "Chụp lại từ album cũ của mẹ để con cháu và họ hàng cùng nhận mặt."
+        }
+      ],
+      "dublinCore": {
+        "identifier": "TL-1962-006",
+        "title": "Ảnh đại gia đình ba thế hệ trước hiên nhà ngói (Sài Gòn, 1962)",
+        "creator": "Chưa rõ",
+        "subject": "Ảnh chân dung gia đình; Sài Gòn 1962",
+        "description": "Ảnh chụp gia đình 7 người thuộc ba thế hệ tại Sài Gòn năm 1962.",
+        "publisher": "Kho Lưu Trữ Gia Đình",
+        "contributor": "Cô Trần Thị Thu",
+        "date": "1962",
+        "type": "Image / Ảnh chụp",
+        "format": "image/jpeg",
+        "source": "Album ảnh gia đình (mẫu minh họa)",
+        "language": "vi",
+        "relation": "TL-1954-003; TL-1965-007",
+        "coverage": "Sài Gòn, Việt Nam (1962)",
+        "rights": "Công khai trong gia đình"
+      }
+    },
+    {
+      "id": "TL-1965-007",
+      "tenTaiLieu": "Bản chép tay lịch ngày giỗ nhánh ngoại (chưa rõ năm lập)",
+      "loaiTaiLieu": "Tài liệu khác",
+      "nguoiTao": "Chưa rõ",
+      "nguoiNhan": null,
+      "thoiGianTao": "Chưa rõ (người lưu giữ ước đoán thập niên 1960)",
+      "namUocLuong": null,
+      "diaDiem": "Hà Nam",
+      "tomTat": "Tờ giấy chép tay ghi các ngày giỗ âm lịch của tổ tiên nhánh ngoại ở Hà Nam kèm lời dặn con cháu. Hiện chưa có bản chụp số hóa và còn thiếu thông tin ngày giỗ cụ bà do rách góc giấy.",
+      "noiDungPhienAm": "[Chưa có bản chụp gốc — nội dung ghi lại theo sổ đối chiếu]:\nGhi nhớ ngày kỵ tiên tổ:\n- Cụ cố: 14 tháng Chạp âm lịch\n- Cụ ông: 08 tháng Giêng âm lịch\n- Cụ bà: [Rách góc giấy — chưa rõ thông tin]\nLời dặn: Con cháu dẫu đi làm ăn xa phương Nam hay phương Bắc đều nhớ ngày về thắp hương, giữ nghĩa anh em.",
+      "noiDungBienTap": "Tư liệu ghi nhớ các ngày kỵ âm lịch của nhánh ngoại tại Hà Nam. Hiện chưa có ảnh chụp bản gốc; ngày giỗ cụ bà và năm lập tài liệu đều ở trạng thái chưa rõ, cần đối chiếu trực tiếp tại quê.",
+      "ngonNgu": "Tiếng Việt",
+      "tinhTrangTaiLieu": "Giấy mỏng dễ mủn, rách góc phải dưới, cần hạn chế mở trực tiếp trước khi chụp ảnh lưu trữ.",
+      "nguoiLuuGiu": "Bác Nguyễn Văn Hải (trưởng chi tại quê Hà Nam)",
+      "nguonGoc": "Tráp gỗ tại nhà thờ nhánh ngoại ở Hà Nam.",
+      "phamViCongBo": "Hạn chế — Chỉ người lưu giữ và thành viên gia đình khi đối chiếu gia phả.",
+      "mucDoRiengTu": "Hạn chế — Chỉ người lưu giữ",
+      "mucKiemChung": "Chưa kiểm chứng",
+      "daDuocPhepCongBo": false,
+      "coThongTinNhayCam": false,
+      "laDuLieuMau": true,
+      "ghiChu": "Chưa có ảnh tài liệu gốc đính kèm. Đề nghị ưu tiên chụp ảnh phẳng khi có dịp về quê.",
+      "danhSachAnh": [],
+      "chuThichTuNgu": [
+        {
+          "tuNgu": "Ngày kỵ",
+          "giaiThich": "Cách gọi trang trọng trong gia phả chỉ ngày mất (ngày giỗ hàng năm) của ông bà tổ tiên."
+        }
+      ],
+      "taiLieuLienQuanIds": ["TL-1968-001", "TL-1954-003"],
+      "lichSuBoSung": [
+        {
+          "id": "LS-008",
+          "ngay": "2025-02-02",
+          "nguoiThucHien": "Ông Trần Văn Hòa",
+          "quanHe": "Con cháu trong họ",
+          "hanhDong": "Tạo hồ sơ ghi chú chờ số hóa",
+          "noiDung": "Ghi chú tình trạng rách góc giấy và các phần thông tin còn chưa rõ."
+        }
+      ],
+      "dublinCore": {
+        "identifier": "TL-1965-007",
+        "title": "Bản chép tay lịch ngày giỗ nhánh ngoại (chưa rõ năm lập)",
+        "creator": "Chưa rõ",
+        "subject": "Gia phả; Ngày giỗ; Hà Nam",
+        "description": "Ghi chép ngày kỵ âm lịch của tổ tiên nhánh ngoại.",
+        "publisher": "Kho Lưu Trữ Gia Đình",
+        "contributor": "Ông Trần Văn Hòa; Bác Nguyễn Văn Hải",
+        "date": "Chưa rõ",
+        "type": "Text / Tài liệu khác",
+        "format": "Chưa có tệp ảnh số hóa",
+        "source": "Tráp gỗ nhà thờ nhánh ngoại tại Hà Nam",
+        "language": "vi",
+        "relation": "TL-1968-001; TL-1954-003",
+        "coverage": "Hà Nam, Việt Nam",
+        "rights": "Hạn chế — Chỉ người lưu giữ"
+      }
+    }
+  ]
+}
